@@ -1,90 +1,45 @@
-🖼️ Image Scraping Project
-📌 Project Description
+# Image Scraper Web App
 
-This project is used to scrape (download) images from websites automatically using Python.
+This is an end-to-end Image Scraping web application built using Flask and BeautifulSoup.
 
-English definition:
-Image scraping means extracting images from web pages using code instead of downloading them manually.
+## Features
+- User can enter any image keyword
+- App scrapes images from Google Images
+- Images are downloaded automatically
+- Images are displayed on the web page
+- API endpoint available for scraping
 
-🚀 Features
+## Tech Stack
+- Python
+- Flask
+- BeautifulSoup
+- Requests
+- HTML
 
-Automatically downloads images from a given URL
+## How to Run Project
 
-Saves images in a local folder
+1. Clone the repository
+2. Create virtual environment
+3. Install requirements
+   pip install -r requirements.txt
+4. Run the app
+   python app.py
+5. Open browser
+   http://127.0.0.1:5000
 
-Supports multiple image formats (jpg, png, jpeg)
+## API Endpoint
 
-Fast and automated process
+POST: /api/scrape  
+Body:
+{
+  "query": "nokia 2690"
+}
 
-Reduces manual work
+Response:
+{
+  "query": "nokia 2690",
+  "total_images": 20
+}
 
-🛠️ Technologies Used
-
-Python
-
-Requests
-
-BeautifulSoup
-
-OS module
-
-📂 Project Structure
-image_scraper/
-│
-├── scraper.py
-├── images/
-│     ├── img1.jpg
-│     ├── img2.jpg
-│
-└── README.md
-
-⚙️ How It Works
-
-User provides a website URL
-
-Program sends request to the website
-
-HTML page is parsed using BeautifulSoup
-
-Image tags (<img>) are extracted
-
-Images are downloaded and saved in folder
-
-English definition:
-Web scraping is the process of collecting data from websites automatically using a program.
-
-▶️ How to Run
-
-Clone the repository
-
-git clone <your-repo-link>
-
-
-Install required libraries
-
-pip install requests beautifulsoup4
-
-
-Run the program
-
-python scraper.py
-
-🧪 Example Use Case
-
-Download product images from e-commerce websites
-
-Collect images for machine learning datasets
-
-Save wallpapers automatically
-
-Educational purpose only
-
-⚠️ Disclaimer
-
-This project is made for educational purposes only.
-Please follow website terms & conditions before scraping images.
-
-👨‍💻 Author
-
-Manoj Pandey
-Learning Python & Web Scraping 🚀
+## Project Type
+End-to-End Python Web Scraping Project

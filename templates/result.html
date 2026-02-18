@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results</title>
+</head>
+<body>
+    <h2>{{ count }} images downloaded for "{{ query }}"</h2>
+
+    {% for i in range(count) %}
+        <img src="{{ url_for('static', filename='images/' + query + '_' ~ i ~ '.jpg') }}"
+             width="200" style="margin:10px;">
+    {% endfor %}
+
+    <br><br>
+    <a href="/">Search again</a>
+</body>
+</html>
